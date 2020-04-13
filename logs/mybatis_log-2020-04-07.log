@@ -1,0 +1,686 @@
+2020-04-07 10:50:55.583[main][main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.niit.mybatis.mybatisxml.mapper.mapperTest], using SpringBootContextLoader
+2020-04-07 10:50:55.592[main][main] INFO  o.s.t.c.s.AbstractContextLoader - Could not detect default resource locations for test class [com.niit.mybatis.mybatisxml.mapper.mapperTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2020-04-07 10:50:55.593[main][main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.niit.mybatis.mybatisxml.mapper.mapperTest]: mapperTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2020-04-07 10:50:55.706[main][main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.niit.mybatis.mybatisxml.MybatisXmlApplication for test class com.niit.mybatis.mybatisxml.mapper.mapperTest
+2020-04-07 10:50:55.788[main][main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+2020-04-07 10:50:55.803[main][main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@609640d5, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@79da1ec0, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@19fb8826, org.springframework.test.context.support.DirtiesContextTestExecutionListener@192d74fb, org.springframework.test.context.transaction.TransactionalTestExecutionListener@4bef0fe3, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@62ea3440, org.springframework.test.context.event.EventPublishingTestExecutionListener@27953a83, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@556d0826, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@66ce957f, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@55b5f5d2, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@5bfa8cc5, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@666b83a4]
+2020-04-07 10:50:56.034[main][main] INFO  c.n.m.mybatisxml.mapper.mapperTest - Starting mapperTest on LAPTOP-HIOADFTN with PID 20052 (started by 谢磊 in E:\study\spring-data\mybatis-xml)
+2020-04-07 10:50:56.034[main][main] DEBUG c.n.m.mybatisxml.mapper.mapperTest - Running with Spring Boot v2.2.6.RELEASE, Spring v5.2.5.RELEASE
+2020-04-07 10:50:56.035[main][main] INFO  c.n.m.mybatisxml.mapper.mapperTest - No active profile set, falling back to default profiles: default
+2020-04-07 10:50:56.398[main][main] DEBUG org.apache.ibatis.logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2020-04-07 10:50:56.839[main][main] WARN  o.s.c.a.AnnotationConfigApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [E:\study\spring-data\mybatis-xml\target\classes\mybatis\mapper\MessageMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [E:\study\spring-data\mybatis-xml\target\classes\mybatis\mapper\MessageMapper.xml]'. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias ' com.niit.mybatis.mybatisxml.model.Message'.  Cause: java.lang.ClassNotFoundException: Cannot find class:  com.niit.mybatis.mybatisxml.model.Message
+2020-04-07 10:50:56.845[main][main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020-04-07 10:50:56.849[main][main] ERROR o.s.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [E:\study\spring-data\mybatis-xml\target\classes\mybatis\mapper\MessageMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [E:\study\spring-data\mybatis-xml\target\classes\mybatis\mapper\MessageMapper.xml]'. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias ' com.niit.mybatis.mybatisxml.model.Message'.  Cause: java.lang.ClassNotFoundException: Cannot find class:  com.niit.mybatis.mybatisxml.model.Message
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:656)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:636)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1338)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1177)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:557)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:882)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:878)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:550)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:747)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:126)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:99)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:124)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:123)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:118)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:83)
+	at org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener.prepareTestInstance(SpringBootDependencyInjectionTestExecutionListener.java:43)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:244)
+	at org.springframework.test.context.junit.jupiter.SpringExtension.postProcessTestInstance(SpringExtension.java:98)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$5(ClassBasedTestDescriptor.java:337)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.executeAndMaskThrowable(ClassBasedTestDescriptor.java:342)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$6(ClassBasedTestDescriptor.java:337)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:177)
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1654)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:484)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
+	at java.base/java.util.stream.StreamSpliterators$WrappingSpliterator.forEachRemaining(StreamSpliterators.java:312)
+	at java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:735)
+	at java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:734)
+	at java.base/java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:658)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.invokeTestInstancePostProcessors(ClassBasedTestDescriptor.java:336)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.instantiateAndPostProcessTestInstance(ClassBasedTestDescriptor.java:259)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$2(ClassBasedTestDescriptor.java:252)
+	at java.base/java.util.Optional.orElseGet(Optional.java:369)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$3(ClassBasedTestDescriptor.java:251)
+	at org.junit.jupiter.engine.execution.TestInstancesProvider.getTestInstances(TestInstancesProvider.java:29)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$prepare$0(TestMethodTestDescriptor.java:106)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:105)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:69)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$prepare$1(NodeTestTask.java:107)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.prepare(NodeTestTask.java:107)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:75)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:125)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:135)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:123)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:122)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:80)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:125)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:135)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:123)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:122)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:80)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:32)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:51)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:229)
+	at org.junit.platform.launcher.core.DefaultLauncher.lambda$execute$6(DefaultLauncher.java:197)
+	at org.junit.platform.launcher.core.DefaultLauncher.withInterceptedStreams(DefaultLauncher.java:211)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:191)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:128)
+	at com.intellij.junit5.JUnit5IdeaTestRunner.startRunnerWithArgs(JUnit5IdeaTestRunner.java:69)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:33)
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:230)
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:58)
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [E:\study\spring-data\mybatis-xml\target\classes\mybatis\mapper\MessageMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [E:\study\spring-data\mybatis-xml\target\classes\mybatis\mapper\MessageMapper.xml]'. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias ' com.niit.mybatis.mybatisxml.model.Message'.  Cause: java.lang.ClassNotFoundException: Cannot find class:  com.niit.mybatis.mybatisxml.model.Message
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:651)
+	... 82 common frames omitted
+Caused by: org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [E:\study\spring-data\mybatis-xml\target\classes\mybatis\mapper\MessageMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [E:\study\spring-data\mybatis-xml\target\classes\mybatis\mapper\MessageMapper.xml]'. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias ' com.niit.mybatis.mybatisxml.model.Message'.  Cause: java.lang.ClassNotFoundException: Cannot find class:  com.niit.mybatis.mybatisxml.model.Message
+	at org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:595)
+	at org.mybatis.spring.SqlSessionFactoryBean.afterPropertiesSet(SqlSessionFactoryBean.java:475)
+	at org.mybatis.spring.SqlSessionFactoryBean.getObject(SqlSessionFactoryBean.java:615)
+	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration.sqlSessionFactory(MybatisAutoConfiguration.java:180)
+	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration$$EnhancerBySpringCGLIB$$610465c4.CGLIB$sqlSessionFactory$1(<generated>)
+	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration$$EnhancerBySpringCGLIB$$610465c4$$FastClassBySpringCGLIB$$2d5ac7dd.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:244)
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:331)
+	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration$$EnhancerBySpringCGLIB$$610465c4.sqlSessionFactory(<generated>)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154)
+	... 83 common frames omitted
+Caused by: org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [E:\study\spring-data\mybatis-xml\target\classes\mybatis\mapper\MessageMapper.xml]'. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias ' com.niit.mybatis.mybatisxml.model.Message'.  Cause: java.lang.ClassNotFoundException: Cannot find class:  com.niit.mybatis.mybatisxml.model.Message
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.configurationElement(XMLMapperBuilder.java:122)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.parse(XMLMapperBuilder.java:94)
+	at org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:593)
+	... 96 common frames omitted
+Caused by: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias ' com.niit.mybatis.mybatisxml.model.Message'.  Cause: java.lang.ClassNotFoundException: Cannot find class:  com.niit.mybatis.mybatisxml.model.Message
+	at org.apache.ibatis.builder.BaseBuilder.resolveClass(BaseBuilder.java:118)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.resultMapElement(XMLMapperBuilder.java:262)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.resultMapElement(XMLMapperBuilder.java:253)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.resultMapElements(XMLMapperBuilder.java:245)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.configurationElement(XMLMapperBuilder.java:118)
+	... 98 common frames omitted
+Caused by: org.apache.ibatis.type.TypeException: Could not resolve type alias ' com.niit.mybatis.mybatisxml.model.Message'.  Cause: java.lang.ClassNotFoundException: Cannot find class:  com.niit.mybatis.mybatisxml.model.Message
+	at org.apache.ibatis.type.TypeAliasRegistry.resolveAlias(TypeAliasRegistry.java:120)
+	at org.apache.ibatis.builder.BaseBuilder.resolveAlias(BaseBuilder.java:149)
+	at org.apache.ibatis.builder.BaseBuilder.resolveClass(BaseBuilder.java:116)
+	... 102 common frames omitted
+Caused by: java.lang.ClassNotFoundException: Cannot find class:  com.niit.mybatis.mybatisxml.model.Message
+	at org.apache.ibatis.io.ClassLoaderWrapper.classForName(ClassLoaderWrapper.java:200)
+	at org.apache.ibatis.io.ClassLoaderWrapper.classForName(ClassLoaderWrapper.java:89)
+	at org.apache.ibatis.io.Resources.classForName(Resources.java:261)
+	at org.apache.ibatis.type.TypeAliasRegistry.resolveAlias(TypeAliasRegistry.java:116)
+	... 104 common frames omitted
+2020-04-07 10:50:56.899[main][main] INFO  c.n.m.mybatisxml.mapper.mapperTest - Starting mapperTest on LAPTOP-HIOADFTN with PID 20052 (started by 谢磊 in E:\study\spring-data\mybatis-xml)
+2020-04-07 10:50:56.900[main][main] DEBUG c.n.m.mybatisxml.mapper.mapperTest - Running with Spring Boot v2.2.6.RELEASE, Spring v5.2.5.RELEASE
+2020-04-07 10:50:56.900[main][main] INFO  c.n.m.mybatisxml.mapper.mapperTest - No active profile set, falling back to default profiles: default
+2020-04-07 10:50:57.182[main][main] WARN  o.s.c.a.AnnotationConfigApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [E:\study\spring-data\mybatis-xml\target\classes\mybatis\mapper\MessageMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [E:\study\spring-data\mybatis-xml\target\classes\mybatis\mapper\MessageMapper.xml]'. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias ' com.niit.mybatis.mybatisxml.model.Message'.  Cause: java.lang.ClassNotFoundException: Cannot find class:  com.niit.mybatis.mybatisxml.model.Message
+2020-04-07 10:50:57.186[main][main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020-04-07 10:50:57.188[main][main] ERROR o.s.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [E:\study\spring-data\mybatis-xml\target\classes\mybatis\mapper\MessageMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [E:\study\spring-data\mybatis-xml\target\classes\mybatis\mapper\MessageMapper.xml]'. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias ' com.niit.mybatis.mybatisxml.model.Message'.  Cause: java.lang.ClassNotFoundException: Cannot find class:  com.niit.mybatis.mybatisxml.model.Message
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:656)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:636)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1338)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1177)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:557)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:882)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:878)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:550)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:747)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:126)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:99)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:124)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:123)
+	at org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener.outputConditionEvaluationReport(SpringBootDependencyInjectionTestExecutionListener.java:53)
+	at org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener.prepareTestInstance(SpringBootDependencyInjectionTestExecutionListener.java:46)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:244)
+	at org.springframework.test.context.junit.jupiter.SpringExtension.postProcessTestInstance(SpringExtension.java:98)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$5(ClassBasedTestDescriptor.java:337)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.executeAndMaskThrowable(ClassBasedTestDescriptor.java:342)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$6(ClassBasedTestDescriptor.java:337)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:177)
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1654)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:484)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
+	at java.base/java.util.stream.StreamSpliterators$WrappingSpliterator.forEachRemaining(StreamSpliterators.java:312)
+	at java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:735)
+	at java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:734)
+	at java.base/java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:658)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.invokeTestInstancePostProcessors(ClassBasedTestDescriptor.java:336)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.instantiateAndPostProcessTestInstance(ClassBasedTestDescriptor.java:259)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$2(ClassBasedTestDescriptor.java:252)
+	at java.base/java.util.Optional.orElseGet(Optional.java:369)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$3(ClassBasedTestDescriptor.java:251)
+	at org.junit.jupiter.engine.execution.TestInstancesProvider.getTestInstances(TestInstancesProvider.java:29)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$prepare$0(TestMethodTestDescriptor.java:106)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:105)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:69)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$prepare$1(NodeTestTask.java:107)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.prepare(NodeTestTask.java:107)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:75)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:125)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:135)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:123)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:122)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:80)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:125)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:135)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:123)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:122)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:80)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:32)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:51)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:229)
+	at org.junit.platform.launcher.core.DefaultLauncher.lambda$execute$6(DefaultLauncher.java:197)
+	at org.junit.platform.launcher.core.DefaultLauncher.withInterceptedStreams(DefaultLauncher.java:211)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:191)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:128)
+	at com.intellij.junit5.JUnit5IdeaTestRunner.startRunnerWithArgs(JUnit5IdeaTestRunner.java:69)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:33)
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:230)
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:58)
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [E:\study\spring-data\mybatis-xml\target\classes\mybatis\mapper\MessageMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [E:\study\spring-data\mybatis-xml\target\classes\mybatis\mapper\MessageMapper.xml]'. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias ' com.niit.mybatis.mybatisxml.model.Message'.  Cause: java.lang.ClassNotFoundException: Cannot find class:  com.niit.mybatis.mybatisxml.model.Message
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:651)
+	... 81 common frames omitted
+Caused by: org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [E:\study\spring-data\mybatis-xml\target\classes\mybatis\mapper\MessageMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [E:\study\spring-data\mybatis-xml\target\classes\mybatis\mapper\MessageMapper.xml]'. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias ' com.niit.mybatis.mybatisxml.model.Message'.  Cause: java.lang.ClassNotFoundException: Cannot find class:  com.niit.mybatis.mybatisxml.model.Message
+	at org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:595)
+	at org.mybatis.spring.SqlSessionFactoryBean.afterPropertiesSet(SqlSessionFactoryBean.java:475)
+	at org.mybatis.spring.SqlSessionFactoryBean.getObject(SqlSessionFactoryBean.java:615)
+	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration.sqlSessionFactory(MybatisAutoConfiguration.java:180)
+	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration$$EnhancerBySpringCGLIB$$610465c4.CGLIB$sqlSessionFactory$1(<generated>)
+	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration$$EnhancerBySpringCGLIB$$610465c4$$FastClassBySpringCGLIB$$2d5ac7dd.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:244)
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:331)
+	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration$$EnhancerBySpringCGLIB$$610465c4.sqlSessionFactory(<generated>)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154)
+	... 82 common frames omitted
+Caused by: org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [E:\study\spring-data\mybatis-xml\target\classes\mybatis\mapper\MessageMapper.xml]'. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias ' com.niit.mybatis.mybatisxml.model.Message'.  Cause: java.lang.ClassNotFoundException: Cannot find class:  com.niit.mybatis.mybatisxml.model.Message
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.configurationElement(XMLMapperBuilder.java:122)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.parse(XMLMapperBuilder.java:94)
+	at org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:593)
+	... 95 common frames omitted
+Caused by: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias ' com.niit.mybatis.mybatisxml.model.Message'.  Cause: java.lang.ClassNotFoundException: Cannot find class:  com.niit.mybatis.mybatisxml.model.Message
+	at org.apache.ibatis.builder.BaseBuilder.resolveClass(BaseBuilder.java:118)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.resultMapElement(XMLMapperBuilder.java:262)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.resultMapElement(XMLMapperBuilder.java:253)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.resultMapElements(XMLMapperBuilder.java:245)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.configurationElement(XMLMapperBuilder.java:118)
+	... 97 common frames omitted
+Caused by: org.apache.ibatis.type.TypeException: Could not resolve type alias ' com.niit.mybatis.mybatisxml.model.Message'.  Cause: java.lang.ClassNotFoundException: Cannot find class:  com.niit.mybatis.mybatisxml.model.Message
+	at org.apache.ibatis.type.TypeAliasRegistry.resolveAlias(TypeAliasRegistry.java:120)
+	at org.apache.ibatis.builder.BaseBuilder.resolveAlias(BaseBuilder.java:149)
+	at org.apache.ibatis.builder.BaseBuilder.resolveClass(BaseBuilder.java:116)
+	... 101 common frames omitted
+Caused by: java.lang.ClassNotFoundException: Cannot find class:  com.niit.mybatis.mybatisxml.model.Message
+	at org.apache.ibatis.io.ClassLoaderWrapper.classForName(ClassLoaderWrapper.java:200)
+	at org.apache.ibatis.io.ClassLoaderWrapper.classForName(ClassLoaderWrapper.java:89)
+	at org.apache.ibatis.io.Resources.classForName(Resources.java:261)
+	at org.apache.ibatis.type.TypeAliasRegistry.resolveAlias(TypeAliasRegistry.java:116)
+	... 103 common frames omitted
+2020-04-07 10:50:57.192[main][main] ERROR o.s.test.context.TestContextManager - Caught exception while allowing TestExecutionListener [org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@19fb8826] to prepare test instance [com.niit.mybatis.mybatisxml.mapper.mapperTest@5a1c3cb4]
+java.lang.IllegalStateException: Failed to load ApplicationContext
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:132)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:123)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:118)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:83)
+	at org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener.prepareTestInstance(SpringBootDependencyInjectionTestExecutionListener.java:43)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:244)
+	at org.springframework.test.context.junit.jupiter.SpringExtension.postProcessTestInstance(SpringExtension.java:98)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$5(ClassBasedTestDescriptor.java:337)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.executeAndMaskThrowable(ClassBasedTestDescriptor.java:342)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$6(ClassBasedTestDescriptor.java:337)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:177)
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1654)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:484)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
+	at java.base/java.util.stream.StreamSpliterators$WrappingSpliterator.forEachRemaining(StreamSpliterators.java:312)
+	at java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:735)
+	at java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:734)
+	at java.base/java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:658)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.invokeTestInstancePostProcessors(ClassBasedTestDescriptor.java:336)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.instantiateAndPostProcessTestInstance(ClassBasedTestDescriptor.java:259)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$2(ClassBasedTestDescriptor.java:252)
+	at java.base/java.util.Optional.orElseGet(Optional.java:369)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$3(ClassBasedTestDescriptor.java:251)
+	at org.junit.jupiter.engine.execution.TestInstancesProvider.getTestInstances(TestInstancesProvider.java:29)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$prepare$0(TestMethodTestDescriptor.java:106)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:105)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:69)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$prepare$1(NodeTestTask.java:107)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.prepare(NodeTestTask.java:107)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:75)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:125)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:135)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:123)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:122)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:80)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:125)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:135)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:123)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:122)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:80)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:32)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:51)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:229)
+	at org.junit.platform.launcher.core.DefaultLauncher.lambda$execute$6(DefaultLauncher.java:197)
+	at org.junit.platform.launcher.core.DefaultLauncher.withInterceptedStreams(DefaultLauncher.java:211)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:191)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:128)
+	at com.intellij.junit5.JUnit5IdeaTestRunner.startRunnerWithArgs(JUnit5IdeaTestRunner.java:69)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:33)
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:230)
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:58)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [E:\study\spring-data\mybatis-xml\target\classes\mybatis\mapper\MessageMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [E:\study\spring-data\mybatis-xml\target\classes\mybatis\mapper\MessageMapper.xml]'. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias ' com.niit.mybatis.mybatisxml.model.Message'.  Cause: java.lang.ClassNotFoundException: Cannot find class:  com.niit.mybatis.mybatisxml.model.Message
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:656)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:636)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1338)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1177)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:557)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:882)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:878)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:550)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:747)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:126)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:99)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:124)
+	... 64 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [E:\study\spring-data\mybatis-xml\target\classes\mybatis\mapper\MessageMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [E:\study\spring-data\mybatis-xml\target\classes\mybatis\mapper\MessageMapper.xml]'. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias ' com.niit.mybatis.mybatisxml.model.Message'.  Cause: java.lang.ClassNotFoundException: Cannot find class:  com.niit.mybatis.mybatisxml.model.Message
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:651)
+	... 82 common frames omitted
+Caused by: org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [E:\study\spring-data\mybatis-xml\target\classes\mybatis\mapper\MessageMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [E:\study\spring-data\mybatis-xml\target\classes\mybatis\mapper\MessageMapper.xml]'. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias ' com.niit.mybatis.mybatisxml.model.Message'.  Cause: java.lang.ClassNotFoundException: Cannot find class:  com.niit.mybatis.mybatisxml.model.Message
+	at org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:595)
+	at org.mybatis.spring.SqlSessionFactoryBean.afterPropertiesSet(SqlSessionFactoryBean.java:475)
+	at org.mybatis.spring.SqlSessionFactoryBean.getObject(SqlSessionFactoryBean.java:615)
+	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration.sqlSessionFactory(MybatisAutoConfiguration.java:180)
+	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration$$EnhancerBySpringCGLIB$$610465c4.CGLIB$sqlSessionFactory$1(<generated>)
+	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration$$EnhancerBySpringCGLIB$$610465c4$$FastClassBySpringCGLIB$$2d5ac7dd.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:244)
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:331)
+	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration$$EnhancerBySpringCGLIB$$610465c4.sqlSessionFactory(<generated>)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154)
+	... 83 common frames omitted
+Caused by: org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [E:\study\spring-data\mybatis-xml\target\classes\mybatis\mapper\MessageMapper.xml]'. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias ' com.niit.mybatis.mybatisxml.model.Message'.  Cause: java.lang.ClassNotFoundException: Cannot find class:  com.niit.mybatis.mybatisxml.model.Message
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.configurationElement(XMLMapperBuilder.java:122)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.parse(XMLMapperBuilder.java:94)
+	at org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:593)
+	... 96 common frames omitted
+Caused by: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias ' com.niit.mybatis.mybatisxml.model.Message'.  Cause: java.lang.ClassNotFoundException: Cannot find class:  com.niit.mybatis.mybatisxml.model.Message
+	at org.apache.ibatis.builder.BaseBuilder.resolveClass(BaseBuilder.java:118)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.resultMapElement(XMLMapperBuilder.java:262)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.resultMapElement(XMLMapperBuilder.java:253)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.resultMapElements(XMLMapperBuilder.java:245)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.configurationElement(XMLMapperBuilder.java:118)
+	... 98 common frames omitted
+Caused by: org.apache.ibatis.type.TypeException: Could not resolve type alias ' com.niit.mybatis.mybatisxml.model.Message'.  Cause: java.lang.ClassNotFoundException: Cannot find class:  com.niit.mybatis.mybatisxml.model.Message
+	at org.apache.ibatis.type.TypeAliasRegistry.resolveAlias(TypeAliasRegistry.java:120)
+	at org.apache.ibatis.builder.BaseBuilder.resolveAlias(BaseBuilder.java:149)
+	at org.apache.ibatis.builder.BaseBuilder.resolveClass(BaseBuilder.java:116)
+	... 102 common frames omitted
+Caused by: java.lang.ClassNotFoundException: Cannot find class:  com.niit.mybatis.mybatisxml.model.Message
+	at org.apache.ibatis.io.ClassLoaderWrapper.classForName(ClassLoaderWrapper.java:200)
+	at org.apache.ibatis.io.ClassLoaderWrapper.classForName(ClassLoaderWrapper.java:89)
+	at org.apache.ibatis.io.Resources.classForName(Resources.java:261)
+	at org.apache.ibatis.type.TypeAliasRegistry.resolveAlias(TypeAliasRegistry.java:116)
+	... 104 common frames omitted
+2020-04-07 11:20:38.589[main][main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.niit.mybatis.mybatisxml.mapper.mapperTest], using SpringBootContextLoader
+2020-04-07 11:20:38.595[main][main] INFO  o.s.t.c.s.AbstractContextLoader - Could not detect default resource locations for test class [com.niit.mybatis.mybatisxml.mapper.mapperTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2020-04-07 11:20:38.596[main][main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.niit.mybatis.mybatisxml.mapper.mapperTest]: mapperTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2020-04-07 11:20:38.690[main][main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.niit.mybatis.mybatisxml.MybatisXmlApplication for test class com.niit.mybatis.mybatisxml.mapper.mapperTest
+2020-04-07 11:20:38.768[main][main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+2020-04-07 11:20:38.779[main][main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@609640d5, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@79da1ec0, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@19fb8826, org.springframework.test.context.support.DirtiesContextTestExecutionListener@192d74fb, org.springframework.test.context.transaction.TransactionalTestExecutionListener@4bef0fe3, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@62ea3440, org.springframework.test.context.event.EventPublishingTestExecutionListener@27953a83, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@556d0826, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@66ce957f, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@55b5f5d2, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@5bfa8cc5, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@666b83a4]
+2020-04-07 11:20:38.996[main][main] INFO  c.n.m.mybatisxml.mapper.mapperTest - Starting mapperTest on LAPTOP-HIOADFTN with PID 23224 (started by 谢磊 in E:\study\spring-data\mybatis-xml)
+2020-04-07 11:20:38.997[main][main] DEBUG c.n.m.mybatisxml.mapper.mapperTest - Running with Spring Boot v2.2.6.RELEASE, Spring v5.2.5.RELEASE
+2020-04-07 11:20:38.997[main][main] INFO  c.n.m.mybatisxml.mapper.mapperTest - No active profile set, falling back to default profiles: default
+2020-04-07 11:20:39.499[main][main] DEBUG org.apache.ibatis.logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2020-04-07 11:20:40.149[main][main] INFO  c.n.m.mybatisxml.mapper.mapperTest - Started mapperTest in 1.336 seconds (JVM running for 2.319)
+2020-04-07 11:21:10.050[main][main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.niit.mybatis.mybatisxml.mapper.mapperTest], using SpringBootContextLoader
+2020-04-07 11:21:10.057[main][main] INFO  o.s.t.c.s.AbstractContextLoader - Could not detect default resource locations for test class [com.niit.mybatis.mybatisxml.mapper.mapperTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2020-04-07 11:21:10.057[main][main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.niit.mybatis.mybatisxml.mapper.mapperTest]: mapperTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2020-04-07 11:21:10.157[main][main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.niit.mybatis.mybatisxml.MybatisXmlApplication for test class com.niit.mybatis.mybatisxml.mapper.mapperTest
+2020-04-07 11:21:10.227[main][main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+2020-04-07 11:21:10.238[main][main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@609640d5, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@79da1ec0, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@19fb8826, org.springframework.test.context.support.DirtiesContextTestExecutionListener@192d74fb, org.springframework.test.context.transaction.TransactionalTestExecutionListener@4bef0fe3, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@62ea3440, org.springframework.test.context.event.EventPublishingTestExecutionListener@27953a83, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@556d0826, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@66ce957f, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@55b5f5d2, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@5bfa8cc5, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@666b83a4]
+2020-04-07 11:21:10.437[main][main] INFO  c.n.m.mybatisxml.mapper.mapperTest - Starting mapperTest on LAPTOP-HIOADFTN with PID 20680 (started by 谢磊 in E:\study\spring-data\mybatis-xml)
+2020-04-07 11:21:10.437[main][main] DEBUG c.n.m.mybatisxml.mapper.mapperTest - Running with Spring Boot v2.2.6.RELEASE, Spring v5.2.5.RELEASE
+2020-04-07 11:21:10.438[main][main] INFO  c.n.m.mybatisxml.mapper.mapperTest - No active profile set, falling back to default profiles: default
+2020-04-07 11:21:10.756[main][main] DEBUG org.apache.ibatis.logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2020-04-07 11:21:11.253[main][main] INFO  c.n.m.mybatisxml.mapper.mapperTest - Started mapperTest in 0.988 seconds (JVM running for 1.926)
+2020-04-07 11:25:20.931[main][main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.niit.mybatis.mybatisxml.mapper.mapperTest], using SpringBootContextLoader
+2020-04-07 11:25:20.943[main][main] INFO  o.s.t.c.s.AbstractContextLoader - Could not detect default resource locations for test class [com.niit.mybatis.mybatisxml.mapper.mapperTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2020-04-07 11:25:20.944[main][main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.niit.mybatis.mybatisxml.mapper.mapperTest]: mapperTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2020-04-07 11:25:21.093[main][main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.niit.mybatis.mybatisxml.MybatisXmlApplication for test class com.niit.mybatis.mybatisxml.mapper.mapperTest
+2020-04-07 11:25:21.196[main][main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+2020-04-07 11:25:21.209[main][main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@609640d5, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@79da1ec0, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@19fb8826, org.springframework.test.context.support.DirtiesContextTestExecutionListener@192d74fb, org.springframework.test.context.transaction.TransactionalTestExecutionListener@4bef0fe3, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@62ea3440, org.springframework.test.context.event.EventPublishingTestExecutionListener@27953a83, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@556d0826, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@66ce957f, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@55b5f5d2, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@5bfa8cc5, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@666b83a4]
+2020-04-07 11:25:21.445[main][main] INFO  c.n.m.mybatisxml.mapper.mapperTest - Starting mapperTest on LAPTOP-HIOADFTN with PID 18000 (started by 谢磊 in E:\study\spring-data\mybatis-xml)
+2020-04-07 11:25:21.445[main][main] DEBUG c.n.m.mybatisxml.mapper.mapperTest - Running with Spring Boot v2.2.6.RELEASE, Spring v5.2.5.RELEASE
+2020-04-07 11:25:21.446[main][main] INFO  c.n.m.mybatisxml.mapper.mapperTest - No active profile set, falling back to default profiles: default
+2020-04-07 11:25:21.832[main][main] DEBUG org.apache.ibatis.logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2020-04-07 11:25:22.474[main][main] INFO  c.n.m.mybatisxml.mapper.mapperTest - Started mapperTest in 1.232 seconds (JVM running for 2.43)
+2020-04-07 11:25:22.787[main][main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2020-04-07 11:25:23.915[main][main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2020-04-07 11:25:23.923[main][main] DEBUG c.n.m.m.mapper.MessageMapper.insert - ==>  Preparing: insert into message(msg_text,msg_summary) value (?,?) 
+2020-04-07 11:25:23.954[main][main] DEBUG c.n.m.m.mapper.MessageMapper.insert - ==> Parameters: HUAWEI(String), 华为(String)
+2020-04-07 11:25:24.065[main][main] DEBUG c.n.m.m.mapper.MessageMapper.insert - <==    Updates: 1
+2020-04-07 11:25:24.067[main][main] INFO  c.n.m.mybatisxml.mapper.mapperTest - 插入的数据： 1
+2020-04-07 11:25:24.085[SpringContextShutdownHook][SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2020-04-07 11:25:24.093[SpringContextShutdownHook][SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2020-04-07 11:27:34.968[main][main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.niit.mybatis.mybatisxml.mapper.mapperTest], using SpringBootContextLoader
+2020-04-07 11:27:34.984[main][main] INFO  o.s.t.c.s.AbstractContextLoader - Could not detect default resource locations for test class [com.niit.mybatis.mybatisxml.mapper.mapperTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2020-04-07 11:27:34.985[main][main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.niit.mybatis.mybatisxml.mapper.mapperTest]: mapperTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2020-04-07 11:27:35.209[main][main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.niit.mybatis.mybatisxml.MybatisXmlApplication for test class com.niit.mybatis.mybatisxml.mapper.mapperTest
+2020-04-07 11:27:35.348[main][main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+2020-04-07 11:27:35.363[main][main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@609640d5, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@79da1ec0, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@19fb8826, org.springframework.test.context.support.DirtiesContextTestExecutionListener@192d74fb, org.springframework.test.context.transaction.TransactionalTestExecutionListener@4bef0fe3, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@62ea3440, org.springframework.test.context.event.EventPublishingTestExecutionListener@27953a83, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@556d0826, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@66ce957f, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@55b5f5d2, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@5bfa8cc5, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@666b83a4]
+2020-04-07 11:27:35.670[main][main] INFO  c.n.m.mybatisxml.mapper.mapperTest - Starting mapperTest on LAPTOP-HIOADFTN with PID 22228 (started by 谢磊 in E:\study\spring-data\mybatis-xml)
+2020-04-07 11:27:35.670[main][main] DEBUG c.n.m.mybatisxml.mapper.mapperTest - Running with Spring Boot v2.2.6.RELEASE, Spring v5.2.5.RELEASE
+2020-04-07 11:27:35.670[main][main] INFO  c.n.m.mybatisxml.mapper.mapperTest - No active profile set, falling back to default profiles: default
+2020-04-07 11:27:36.018[main][main] DEBUG org.apache.ibatis.logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2020-04-07 11:27:36.594[main][main] INFO  c.n.m.mybatisxml.mapper.mapperTest - Started mapperTest in 1.185 seconds (JVM running for 2.479)
+2020-04-07 11:27:36.885[main][main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2020-04-07 11:27:37.574[main][main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2020-04-07 11:27:37.583[main][main] DEBUG c.n.m.m.m.MessageMapper.selectAll - ==>  Preparing: select * from message 
+2020-04-07 11:27:37.608[main][main] DEBUG c.n.m.m.m.MessageMapper.selectAll - ==> Parameters: 
+2020-04-07 11:27:37.757[main][main] DEBUG c.n.m.m.m.MessageMapper.selectAll - <==      Total: 6
+2020-04-07 11:27:37.763[main][main] INFO  c.n.m.mybatisxml.mapper.mapperTest - 查询到的记录： [Message(msgId=1, msgText=南邮, msgSummary=学校), Message(msgId=2, msgText=niit, msgSummary=学校), Message(msgId=3, msgText=niit, msgSummary=学校), Message(msgId=4, msgText=niit, msgSummary=学校), Message(msgId=5, msgText=niit, msgSummary=学校), Message(msgId=6, msgText=HUAWEI, msgSummary=华为)]
+2020-04-07 11:27:37.764[main][main] INFO  c.n.m.mybatisxml.mapper.mapperTest - 查询到的记录： [Message(msgId=1, msgText=南邮, msgSummary=学校), Message(msgId=2, msgText=niit, msgSummary=学校), Message(msgId=3, msgText=niit, msgSummary=学校), Message(msgId=4, msgText=niit, msgSummary=学校), Message(msgId=5, msgText=niit, msgSummary=学校), Message(msgId=6, msgText=HUAWEI, msgSummary=华为)]
+2020-04-07 11:27:37.764[main][main] INFO  c.n.m.mybatisxml.mapper.mapperTest - 查询到的记录： [Message(msgId=1, msgText=南邮, msgSummary=学校), Message(msgId=2, msgText=niit, msgSummary=学校), Message(msgId=3, msgText=niit, msgSummary=学校), Message(msgId=4, msgText=niit, msgSummary=学校), Message(msgId=5, msgText=niit, msgSummary=学校), Message(msgId=6, msgText=HUAWEI, msgSummary=华为)]
+2020-04-07 11:27:37.764[main][main] INFO  c.n.m.mybatisxml.mapper.mapperTest - 查询到的记录： [Message(msgId=1, msgText=南邮, msgSummary=学校), Message(msgId=2, msgText=niit, msgSummary=学校), Message(msgId=3, msgText=niit, msgSummary=学校), Message(msgId=4, msgText=niit, msgSummary=学校), Message(msgId=5, msgText=niit, msgSummary=学校), Message(msgId=6, msgText=HUAWEI, msgSummary=华为)]
+2020-04-07 11:27:37.764[main][main] INFO  c.n.m.mybatisxml.mapper.mapperTest - 查询到的记录： [Message(msgId=1, msgText=南邮, msgSummary=学校), Message(msgId=2, msgText=niit, msgSummary=学校), Message(msgId=3, msgText=niit, msgSummary=学校), Message(msgId=4, msgText=niit, msgSummary=学校), Message(msgId=5, msgText=niit, msgSummary=学校), Message(msgId=6, msgText=HUAWEI, msgSummary=华为)]
+2020-04-07 11:27:37.765[main][main] INFO  c.n.m.mybatisxml.mapper.mapperTest - 查询到的记录： [Message(msgId=1, msgText=南邮, msgSummary=学校), Message(msgId=2, msgText=niit, msgSummary=学校), Message(msgId=3, msgText=niit, msgSummary=学校), Message(msgId=4, msgText=niit, msgSummary=学校), Message(msgId=5, msgText=niit, msgSummary=学校), Message(msgId=6, msgText=HUAWEI, msgSummary=华为)]
+2020-04-07 11:27:37.778[SpringContextShutdownHook][SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2020-04-07 11:27:37.791[SpringContextShutdownHook][SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2020-04-07 11:36:27.241[main][main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.niit.mybatis.mybatisxml.mapper.mapperTest], using SpringBootContextLoader
+2020-04-07 11:36:27.248[main][main] INFO  o.s.t.c.s.AbstractContextLoader - Could not detect default resource locations for test class [com.niit.mybatis.mybatisxml.mapper.mapperTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2020-04-07 11:36:27.248[main][main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.niit.mybatis.mybatisxml.mapper.mapperTest]: mapperTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2020-04-07 11:36:27.378[main][main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.niit.mybatis.mybatisxml.MybatisXmlApplication for test class com.niit.mybatis.mybatisxml.mapper.mapperTest
+2020-04-07 11:36:27.463[main][main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+2020-04-07 11:36:27.476[main][main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@79da1ec0, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@19fb8826, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@192d74fb, org.springframework.test.context.support.DirtiesContextTestExecutionListener@4bef0fe3, org.springframework.test.context.transaction.TransactionalTestExecutionListener@62ea3440, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@27953a83, org.springframework.test.context.event.EventPublishingTestExecutionListener@556d0826, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@66ce957f, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@55b5f5d2, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@5bfa8cc5, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@666b83a4, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@749c877b]
+2020-04-07 11:36:27.707[main][main] INFO  c.n.m.mybatisxml.mapper.mapperTest - Starting mapperTest on LAPTOP-HIOADFTN with PID 12232 (started by 谢磊 in E:\study\spring-data\mybatis-xml)
+2020-04-07 11:36:27.707[main][main] DEBUG c.n.m.mybatisxml.mapper.mapperTest - Running with Spring Boot v2.2.6.RELEASE, Spring v5.2.5.RELEASE
+2020-04-07 11:36:27.707[main][main] INFO  c.n.m.mybatisxml.mapper.mapperTest - No active profile set, falling back to default profiles: default
+2020-04-07 11:36:28.063[main][main] DEBUG org.apache.ibatis.logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2020-04-07 11:36:28.653[main][main] INFO  c.n.m.mybatisxml.mapper.mapperTest - Started mapperTest in 1.147 seconds (JVM running for 2.23)
+2020-04-07 11:36:28.927[main][main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2020-04-07 11:36:29.638[main][main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2020-04-07 11:36:29.647[main][main] DEBUG c.n.m.m.m.MessageMapper.selectById - ==>  Preparing: SELECT msg_id,msg_text,msg_summary FROM message where msg_id=? 
+2020-04-07 11:36:29.675[main][main] DEBUG c.n.m.m.m.MessageMapper.selectById - ==> Parameters: 1(Integer)
+2020-04-07 11:36:29.715[main][main] DEBUG c.n.m.m.m.MessageMapper.selectById - <==      Total: 1
+2020-04-07 11:36:29.720[main][main] INFO  c.n.m.mybatisxml.mapper.mapperTest - id为1的数据:  Message(msgId=1, msgText=南邮, msgSummary=学校)
+2020-04-07 11:36:29.738[SpringContextShutdownHook][SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2020-04-07 11:36:29.743[SpringContextShutdownHook][SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2020-04-07 12:52:18.522[main][main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.niit.mybatis.mybatisxml.mapper.mapperTest], using SpringBootContextLoader
+2020-04-07 12:52:18.527[main][main] INFO  o.s.t.c.s.AbstractContextLoader - Could not detect default resource locations for test class [com.niit.mybatis.mybatisxml.mapper.mapperTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2020-04-07 12:52:18.527[main][main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.niit.mybatis.mybatisxml.mapper.mapperTest]: mapperTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2020-04-07 12:52:18.604[main][main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.niit.mybatis.mybatisxml.MybatisXmlApplication for test class com.niit.mybatis.mybatisxml.mapper.mapperTest
+2020-04-07 12:52:18.735[main][main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+2020-04-07 12:52:18.746[main][main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@19fb8826, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@192d74fb, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@4bef0fe3, org.springframework.test.context.support.DirtiesContextTestExecutionListener@62ea3440, org.springframework.test.context.transaction.TransactionalTestExecutionListener@27953a83, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@556d0826, org.springframework.test.context.event.EventPublishingTestExecutionListener@66ce957f, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@55b5f5d2, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@5bfa8cc5, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@666b83a4, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@749c877b, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@efde75f]
+2020-04-07 12:52:18.988[main][main] INFO  c.n.m.mybatisxml.mapper.mapperTest - Starting mapperTest on LAPTOP-HIOADFTN with PID 12248 (started by 谢磊 in E:\study\spring-data\mybatis-xml)
+2020-04-07 12:52:18.988[main][main] DEBUG c.n.m.mybatisxml.mapper.mapperTest - Running with Spring Boot v2.2.6.RELEASE, Spring v5.2.5.RELEASE
+2020-04-07 12:52:18.989[main][main] INFO  c.n.m.mybatisxml.mapper.mapperTest - No active profile set, falling back to default profiles: default
+2020-04-07 12:52:19.380[main][main] DEBUG org.apache.ibatis.logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2020-04-07 12:52:19.866[main][main] INFO  c.n.m.mybatisxml.mapper.mapperTest - Started mapperTest in 1.089 seconds (JVM running for 2.19)
+2020-04-07 12:52:20.126[main][main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2020-04-07 12:52:20.792[main][main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2020-04-07 12:52:20.800[main][main] DEBUG c.n.m.m.mapper.MessageMapper.delete - ==>  Preparing: delete from message where msg_id=? 
+2020-04-07 12:52:20.825[main][main] DEBUG c.n.m.m.mapper.MessageMapper.delete - ==> Parameters: 1(Integer)
+2020-04-07 12:52:20.858[main][main] DEBUG c.n.m.m.mapper.MessageMapper.delete - <==    Updates: 1
+2020-04-07 12:52:20.861[main][main] INFO  c.n.m.mybatisxml.mapper.mapperTest - 删除的数据条数: 1
+2020-04-07 12:52:20.874[SpringContextShutdownHook][SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2020-04-07 12:52:20.878[SpringContextShutdownHook][SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2020-04-07 13:03:46.449[main][main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.niit.mybatis.mybatisxml.mapper.mapperTest], using SpringBootContextLoader
+2020-04-07 13:03:46.455[main][main] INFO  o.s.t.c.s.AbstractContextLoader - Could not detect default resource locations for test class [com.niit.mybatis.mybatisxml.mapper.mapperTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2020-04-07 13:03:46.456[main][main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.niit.mybatis.mybatisxml.mapper.mapperTest]: mapperTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2020-04-07 13:03:46.548[main][main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.niit.mybatis.mybatisxml.MybatisXmlApplication for test class com.niit.mybatis.mybatisxml.mapper.mapperTest
+2020-04-07 13:03:46.619[main][main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+2020-04-07 13:03:46.628[main][main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@192d74fb, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@4bef0fe3, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@62ea3440, org.springframework.test.context.support.DirtiesContextTestExecutionListener@27953a83, org.springframework.test.context.transaction.TransactionalTestExecutionListener@556d0826, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@66ce957f, org.springframework.test.context.event.EventPublishingTestExecutionListener@55b5f5d2, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@5bfa8cc5, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@666b83a4, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@749c877b, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@efde75f, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@16ecee1]
+2020-04-07 13:03:46.816[main][main] INFO  c.n.m.mybatisxml.mapper.mapperTest - Starting mapperTest on LAPTOP-HIOADFTN with PID 18256 (started by 谢磊 in E:\study\spring-data\mybatis-xml)
+2020-04-07 13:03:46.817[main][main] DEBUG c.n.m.mybatisxml.mapper.mapperTest - Running with Spring Boot v2.2.6.RELEASE, Spring v5.2.5.RELEASE
+2020-04-07 13:03:46.817[main][main] INFO  c.n.m.mybatisxml.mapper.mapperTest - No active profile set, falling back to default profiles: default
+2020-04-07 13:03:47.101[main][main] DEBUG org.apache.ibatis.logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2020-04-07 13:03:47.589[main][main] INFO  c.n.m.mybatisxml.mapper.mapperTest - Started mapperTest in 0.934 seconds (JVM running for 1.89)
+2020-04-07 13:03:47.859[main][main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2020-04-07 13:03:48.527[main][main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2020-04-07 13:03:48.535[main][main] DEBUG c.n.m.m.m.MessageMapper.updateText - ==>  Preparing: UPDATE message SET msg_text=? WHERE msg_id = ? 
+2020-04-07 13:03:48.561[main][main] DEBUG c.n.m.m.m.MessageMapper.updateText - ==> Parameters: computer(String), 2(Integer)
+2020-04-07 13:03:48.634[main][main] DEBUG c.n.m.m.m.MessageMapper.updateText - <==    Updates: 1
+2020-04-07 13:03:48.636[main][main] INFO  c.n.m.mybatisxml.mapper.mapperTest - 更新Text的数据条数: 1
+2020-04-07 13:03:48.652[SpringContextShutdownHook][SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2020-04-07 13:03:48.660[SpringContextShutdownHook][SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2020-04-07 13:10:28.639[main][main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.niit.mybatis.mybatisxml.mapper.mapperTest], using SpringBootContextLoader
+2020-04-07 13:10:28.645[main][main] INFO  o.s.t.c.s.AbstractContextLoader - Could not detect default resource locations for test class [com.niit.mybatis.mybatisxml.mapper.mapperTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2020-04-07 13:10:28.646[main][main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.niit.mybatis.mybatisxml.mapper.mapperTest]: mapperTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2020-04-07 13:10:28.750[main][main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.niit.mybatis.mybatisxml.MybatisXmlApplication for test class com.niit.mybatis.mybatisxml.mapper.mapperTest
+2020-04-07 13:10:28.821[main][main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+2020-04-07 13:10:28.833[main][main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@4bef0fe3, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@62ea3440, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@27953a83, org.springframework.test.context.support.DirtiesContextTestExecutionListener@556d0826, org.springframework.test.context.transaction.TransactionalTestExecutionListener@66ce957f, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@55b5f5d2, org.springframework.test.context.event.EventPublishingTestExecutionListener@5bfa8cc5, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@666b83a4, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@749c877b, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@efde75f, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@16ecee1, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@3b220bcb]
+2020-04-07 13:10:29.028[main][main] INFO  c.n.m.mybatisxml.mapper.mapperTest - Starting mapperTest on LAPTOP-HIOADFTN with PID 116 (started by 谢磊 in E:\study\spring-data\mybatis-xml)
+2020-04-07 13:10:29.029[main][main] DEBUG c.n.m.mybatisxml.mapper.mapperTest - Running with Spring Boot v2.2.6.RELEASE, Spring v5.2.5.RELEASE
+2020-04-07 13:10:29.029[main][main] INFO  c.n.m.mybatisxml.mapper.mapperTest - No active profile set, falling back to default profiles: default
+2020-04-07 13:10:29.341[main][main] DEBUG org.apache.ibatis.logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2020-04-07 13:10:29.845[main][main] INFO  c.n.m.mybatisxml.mapper.mapperTest - Started mapperTest in 0.983 seconds (JVM running for 1.994)
+2020-04-07 13:10:30.124[main][main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2020-04-07 13:10:31.048[main][main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2020-04-07 13:10:31.056[main][main] DEBUG c.n.m.m.mapper.MessageMapper.update - ==>  Preparing: UPDATE message SET msg_text=?, msg_summary=? WHERE msg_id = ? 
+2020-04-07 13:10:31.085[main][main] DEBUG c.n.m.m.mapper.MessageMapper.update - ==> Parameters: computer(String), 学校(String), 1(Integer)
+2020-04-07 13:10:31.086[main][main] DEBUG c.n.m.m.mapper.MessageMapper.update - <==    Updates: 0
+2020-04-07 13:10:31.088[main][main] INFO  c.n.m.mybatisxml.mapper.mapperTest - 更新数据条数:0
+2020-04-07 13:10:31.102[SpringContextShutdownHook][SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2020-04-07 13:10:31.106[SpringContextShutdownHook][SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2020-04-07 13:21:08.188[main][main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.niit.mybatis.mybatisxml.mapper.mapperTest], using SpringBootContextLoader
+2020-04-07 13:21:08.194[main][main] INFO  o.s.t.c.s.AbstractContextLoader - Could not detect default resource locations for test class [com.niit.mybatis.mybatisxml.mapper.mapperTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2020-04-07 13:21:08.194[main][main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.niit.mybatis.mybatisxml.mapper.mapperTest]: mapperTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2020-04-07 13:21:08.285[main][main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.niit.mybatis.mybatisxml.MybatisXmlApplication for test class com.niit.mybatis.mybatisxml.mapper.mapperTest
+2020-04-07 13:21:08.352[main][main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+2020-04-07 13:21:08.363[main][main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@62ea3440, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@27953a83, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@556d0826, org.springframework.test.context.support.DirtiesContextTestExecutionListener@66ce957f, org.springframework.test.context.transaction.TransactionalTestExecutionListener@55b5f5d2, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@5bfa8cc5, org.springframework.test.context.event.EventPublishingTestExecutionListener@666b83a4, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@749c877b, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@efde75f, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@16ecee1, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@3b220bcb, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@2b95e48b]
+2020-04-07 13:21:08.556[main][main] INFO  c.n.m.mybatisxml.mapper.mapperTest - Starting mapperTest on LAPTOP-HIOADFTN with PID 10700 (started by 谢磊 in E:\study\spring-data\mybatis-xml)
+2020-04-07 13:21:08.556[main][main] DEBUG c.n.m.mybatisxml.mapper.mapperTest - Running with Spring Boot v2.2.6.RELEASE, Spring v5.2.5.RELEASE
+2020-04-07 13:21:08.556[main][main] INFO  c.n.m.mybatisxml.mapper.mapperTest - No active profile set, falling back to default profiles: default
+2020-04-07 13:21:08.853[main][main] DEBUG org.apache.ibatis.logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2020-04-07 13:21:09.346[main][main] INFO  c.n.m.mybatisxml.mapper.mapperTest - Started mapperTest in 0.957 seconds (JVM running for 1.908)
+2020-04-07 13:21:09.608[main][main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2020-04-07 13:21:10.268[main][main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2020-04-07 13:21:10.276[main][main] DEBUG c.n.m.m.m.MessageMapper.batchInsert - ==>  Preparing: INSERT INTO message(msg_text,msg_summary) VALUES (?,?) , (?,?) 
+2020-04-07 13:21:10.305[main][main] DEBUG c.n.m.m.m.MessageMapper.batchInsert - ==> Parameters: apple(String), 水果(String), orange(String), 水果(String)
+2020-04-07 13:21:10.400[main][main] DEBUG c.n.m.m.m.MessageMapper.batchInsert - <==    Updates: 2
+2020-04-07 13:21:10.421[SpringContextShutdownHook][SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2020-04-07 13:21:10.434[SpringContextShutdownHook][SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2020-04-07 13:23:50.403[main][main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.niit.mybatis.mybatisxml.mapper.mapperTest], using SpringBootContextLoader
+2020-04-07 13:23:50.410[main][main] INFO  o.s.t.c.s.AbstractContextLoader - Could not detect default resource locations for test class [com.niit.mybatis.mybatisxml.mapper.mapperTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2020-04-07 13:23:50.411[main][main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.niit.mybatis.mybatisxml.mapper.mapperTest]: mapperTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2020-04-07 13:23:50.502[main][main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.niit.mybatis.mybatisxml.MybatisXmlApplication for test class com.niit.mybatis.mybatisxml.mapper.mapperTest
+2020-04-07 13:23:50.589[main][main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+2020-04-07 13:23:50.601[main][main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@62ea3440, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@27953a83, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@556d0826, org.springframework.test.context.support.DirtiesContextTestExecutionListener@66ce957f, org.springframework.test.context.transaction.TransactionalTestExecutionListener@55b5f5d2, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@5bfa8cc5, org.springframework.test.context.event.EventPublishingTestExecutionListener@666b83a4, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@749c877b, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@efde75f, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@16ecee1, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@3b220bcb, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@2b95e48b]
+2020-04-07 13:23:50.906[main][main] INFO  c.n.m.mybatisxml.mapper.mapperTest - Starting mapperTest on LAPTOP-HIOADFTN with PID 5816 (started by 谢磊 in E:\study\spring-data\mybatis-xml)
+2020-04-07 13:23:50.907[main][main] DEBUG c.n.m.mybatisxml.mapper.mapperTest - Running with Spring Boot v2.2.6.RELEASE, Spring v5.2.5.RELEASE
+2020-04-07 13:23:50.907[main][main] INFO  c.n.m.mybatisxml.mapper.mapperTest - No active profile set, falling back to default profiles: default
+2020-04-07 13:23:51.252[main][main] DEBUG org.apache.ibatis.logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2020-04-07 13:23:51.741[main][main] INFO  c.n.m.mybatisxml.mapper.mapperTest - Started mapperTest in 1.099 seconds (JVM running for 2.101)
+2020-04-07 13:23:52.015[main][main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2020-04-07 13:23:52.663[main][main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2020-04-07 13:23:52.671[main][main] DEBUG c.n.m.m.m.MessageMapper.batchInsert - ==>  Preparing: INSERT INTO message(msg_text,msg_summary) VALUES (?,?) , (?,?) 
+2020-04-07 13:23:52.698[main][main] DEBUG c.n.m.m.m.MessageMapper.batchInsert - ==> Parameters: apple(String), 水果(String), orange(String), 水果(String)
+2020-04-07 13:23:52.784[main][main] DEBUG c.n.m.m.m.MessageMapper.batchInsert - <==    Updates: 2
+2020-04-07 13:23:52.786[main][main] INFO  c.n.m.mybatisxml.mapper.mapperTest - 插入数据条数: 2
+2020-04-07 13:23:52.801[SpringContextShutdownHook][SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2020-04-07 13:23:52.808[SpringContextShutdownHook][SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2020-04-07 13:24:47.956[main][main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.niit.mybatis.mybatisxml.mapper.mapperTest], using SpringBootContextLoader
+2020-04-07 13:24:47.964[main][main] INFO  o.s.t.c.s.AbstractContextLoader - Could not detect default resource locations for test class [com.niit.mybatis.mybatisxml.mapper.mapperTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2020-04-07 13:24:47.964[main][main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.niit.mybatis.mybatisxml.mapper.mapperTest]: mapperTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2020-04-07 13:24:48.059[main][main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.niit.mybatis.mybatisxml.MybatisXmlApplication for test class com.niit.mybatis.mybatisxml.mapper.mapperTest
+2020-04-07 13:24:48.137[main][main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+2020-04-07 13:24:48.148[main][main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@6d0b5baf, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@631e06ab, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@2a3591c5, org.springframework.test.context.support.DirtiesContextTestExecutionListener@34a75079, org.springframework.test.context.transaction.TransactionalTestExecutionListener@346a361, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@107ed6fc, org.springframework.test.context.event.EventPublishingTestExecutionListener@1643d68f, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@186978a6, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@2e029d61, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@482d776b, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@4052274f, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@132ddbab]
+2020-04-07 13:24:48.350[main][main] INFO  c.n.m.mybatisxml.mapper.mapperTest - Starting mapperTest on LAPTOP-HIOADFTN with PID 9824 (started by 谢磊 in E:\study\spring-data\mybatis-xml)
+2020-04-07 13:24:48.350[main][main] DEBUG c.n.m.mybatisxml.mapper.mapperTest - Running with Spring Boot v2.2.6.RELEASE, Spring v5.2.5.RELEASE
+2020-04-07 13:24:48.351[main][main] INFO  c.n.m.mybatisxml.mapper.mapperTest - No active profile set, falling back to default profiles: default
+2020-04-07 13:24:48.695[main][main] DEBUG org.apache.ibatis.logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2020-04-07 13:24:49.321[main][main] INFO  c.n.m.mybatisxml.mapper.mapperTest - Started mapperTest in 1.147 seconds (JVM running for 2.495)
+2020-04-07 13:24:49.643[main][main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2020-04-07 13:24:50.294[main][main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2020-04-07 13:24:50.303[main][main] DEBUG c.n.m.m.m.MessageMapper.batchInsert - ==>  Preparing: INSERT INTO message(msg_text,msg_summary) VALUES (?,?) , (?,?) 
+2020-04-07 13:24:50.330[main][main] DEBUG c.n.m.m.m.MessageMapper.batchInsert - ==> Parameters: apple(String), 水果(String), orange(String), 水果(String)
+2020-04-07 13:24:50.448[main][main] DEBUG c.n.m.m.m.MessageMapper.batchInsert - <==    Updates: 2
+2020-04-07 13:24:50.450[main][main] INFO  c.n.m.mybatisxml.mapper.mapperTest - 插入数据条数: 2
+2020-04-07 13:24:50.461[main][main] DEBUG c.n.m.m.m.MessageMapper.updateText - ==>  Preparing: UPDATE message SET msg_text=? WHERE msg_id = ? 
+2020-04-07 13:24:50.462[main][main] DEBUG c.n.m.m.m.MessageMapper.updateText - ==> Parameters: computer(String), 2(Integer)
+2020-04-07 13:24:50.463[main][main] DEBUG c.n.m.m.m.MessageMapper.updateText - <==    Updates: 1
+2020-04-07 13:24:50.463[main][main] INFO  c.n.m.mybatisxml.mapper.mapperTest - 更新Text的数据条数: 1
+2020-04-07 13:24:50.467[main][main] DEBUG c.n.m.m.m.MessageMapper.selectAll - ==>  Preparing: select * from message 
+2020-04-07 13:24:50.468[main][main] DEBUG c.n.m.m.m.MessageMapper.selectAll - ==> Parameters: 
+2020-04-07 13:24:50.495[main][main] DEBUG c.n.m.m.m.MessageMapper.selectAll - <==      Total: 7
+2020-04-07 13:24:50.499[main][main] INFO  c.n.m.mybatisxml.mapper.mapperTest - 查询到的记录： [Message(msgId=2, msgText=computer, msgSummary=学校), Message(msgId=3, msgText=niit, msgSummary=学校), Message(msgId=4, msgText=niit, msgSummary=学校), Message(msgId=5, msgText=niit, msgSummary=学校), Message(msgId=6, msgText=HUAWEI, msgSummary=华为), Message(msgId=11, msgText=apple, msgSummary=水果), Message(msgId=12, msgText=orange, msgSummary=水果)]
+2020-04-07 13:24:50.499[main][main] INFO  c.n.m.mybatisxml.mapper.mapperTest - 查询到的记录： [Message(msgId=2, msgText=computer, msgSummary=学校), Message(msgId=3, msgText=niit, msgSummary=学校), Message(msgId=4, msgText=niit, msgSummary=学校), Message(msgId=5, msgText=niit, msgSummary=学校), Message(msgId=6, msgText=HUAWEI, msgSummary=华为), Message(msgId=11, msgText=apple, msgSummary=水果), Message(msgId=12, msgText=orange, msgSummary=水果)]
+2020-04-07 13:24:50.499[main][main] INFO  c.n.m.mybatisxml.mapper.mapperTest - 查询到的记录： [Message(msgId=2, msgText=computer, msgSummary=学校), Message(msgId=3, msgText=niit, msgSummary=学校), Message(msgId=4, msgText=niit, msgSummary=学校), Message(msgId=5, msgText=niit, msgSummary=学校), Message(msgId=6, msgText=HUAWEI, msgSummary=华为), Message(msgId=11, msgText=apple, msgSummary=水果), Message(msgId=12, msgText=orange, msgSummary=水果)]
+2020-04-07 13:24:50.499[main][main] INFO  c.n.m.mybatisxml.mapper.mapperTest - 查询到的记录： [Message(msgId=2, msgText=computer, msgSummary=学校), Message(msgId=3, msgText=niit, msgSummary=学校), Message(msgId=4, msgText=niit, msgSummary=学校), Message(msgId=5, msgText=niit, msgSummary=学校), Message(msgId=6, msgText=HUAWEI, msgSummary=华为), Message(msgId=11, msgText=apple, msgSummary=水果), Message(msgId=12, msgText=orange, msgSummary=水果)]
+2020-04-07 13:24:50.499[main][main] INFO  c.n.m.mybatisxml.mapper.mapperTest - 查询到的记录： [Message(msgId=2, msgText=computer, msgSummary=学校), Message(msgId=3, msgText=niit, msgSummary=学校), Message(msgId=4, msgText=niit, msgSummary=学校), Message(msgId=5, msgText=niit, msgSummary=学校), Message(msgId=6, msgText=HUAWEI, msgSummary=华为), Message(msgId=11, msgText=apple, msgSummary=水果), Message(msgId=12, msgText=orange, msgSummary=水果)]
+2020-04-07 13:24:50.499[main][main] INFO  c.n.m.mybatisxml.mapper.mapperTest - 查询到的记录： [Message(msgId=2, msgText=computer, msgSummary=学校), Message(msgId=3, msgText=niit, msgSummary=学校), Message(msgId=4, msgText=niit, msgSummary=学校), Message(msgId=5, msgText=niit, msgSummary=学校), Message(msgId=6, msgText=HUAWEI, msgSummary=华为), Message(msgId=11, msgText=apple, msgSummary=水果), Message(msgId=12, msgText=orange, msgSummary=水果)]
+2020-04-07 13:24:50.499[main][main] INFO  c.n.m.mybatisxml.mapper.mapperTest - 查询到的记录： [Message(msgId=2, msgText=computer, msgSummary=学校), Message(msgId=3, msgText=niit, msgSummary=学校), Message(msgId=4, msgText=niit, msgSummary=学校), Message(msgId=5, msgText=niit, msgSummary=学校), Message(msgId=6, msgText=HUAWEI, msgSummary=华为), Message(msgId=11, msgText=apple, msgSummary=水果), Message(msgId=12, msgText=orange, msgSummary=水果)]
+2020-04-07 13:24:50.503[main][main] DEBUG c.n.m.m.mapper.MessageMapper.delete - ==>  Preparing: delete from message where msg_id=? 
+2020-04-07 13:24:50.503[main][main] DEBUG c.n.m.m.mapper.MessageMapper.delete - ==> Parameters: 1(Integer)
+2020-04-07 13:24:50.504[main][main] DEBUG c.n.m.m.mapper.MessageMapper.delete - <==    Updates: 0
+2020-04-07 13:24:50.504[main][main] INFO  c.n.m.mybatisxml.mapper.mapperTest - 删除的数据条数: 0
+2020-04-07 13:24:50.508[main][main] DEBUG c.n.m.m.mapper.MessageMapper.insert - ==>  Preparing: insert into message(msg_text,msg_summary) value (?,?) 
+2020-04-07 13:24:50.508[main][main] DEBUG c.n.m.m.mapper.MessageMapper.insert - ==> Parameters: HUAWEI(String), 华为(String)
+2020-04-07 13:24:50.518[main][main] DEBUG c.n.m.m.mapper.MessageMapper.insert - <==    Updates: 1
+2020-04-07 13:24:50.518[main][main] INFO  c.n.m.mybatisxml.mapper.mapperTest - 插入的数据： 1
+2020-04-07 13:24:50.523[main][main] DEBUG c.n.m.m.mapper.MessageMapper.update - ==>  Preparing: UPDATE message SET msg_text=?, msg_summary=? WHERE msg_id = ? 
+2020-04-07 13:24:50.523[main][main] DEBUG c.n.m.m.mapper.MessageMapper.update - ==> Parameters: computer(String), 学校(String), 1(Integer)
+2020-04-07 13:24:50.524[main][main] DEBUG c.n.m.m.mapper.MessageMapper.update - <==    Updates: 0
+2020-04-07 13:24:50.524[main][main] INFO  c.n.m.mybatisxml.mapper.mapperTest - 更新数据条数:0
+2020-04-07 13:24:50.528[main][main] DEBUG c.n.m.m.m.MessageMapper.selectById - ==>  Preparing: SELECT msg_id,msg_text,msg_summary FROM message where msg_id=? 
+2020-04-07 13:24:50.528[main][main] DEBUG c.n.m.m.m.MessageMapper.selectById - ==> Parameters: 1(Integer)
+2020-04-07 13:24:50.529[main][main] DEBUG c.n.m.m.m.MessageMapper.selectById - <==      Total: 0
+2020-04-07 13:24:50.529[main][main] INFO  c.n.m.mybatisxml.mapper.mapperTest - id为1的数据:  null
+2020-04-07 13:24:50.538[SpringContextShutdownHook][SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2020-04-07 13:24:50.546[SpringContextShutdownHook][SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2020-04-07 13:24:56.317[main][main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.niit.mybatis.mybatisxml.mapper.mapperTest], using SpringBootContextLoader
+2020-04-07 13:24:56.325[main][main] INFO  o.s.t.c.s.AbstractContextLoader - Could not detect default resource locations for test class [com.niit.mybatis.mybatisxml.mapper.mapperTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2020-04-07 13:24:56.326[main][main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.niit.mybatis.mybatisxml.mapper.mapperTest]: mapperTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2020-04-07 13:24:56.475[main][main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.niit.mybatis.mybatisxml.MybatisXmlApplication for test class com.niit.mybatis.mybatisxml.mapper.mapperTest
+2020-04-07 13:24:56.600[main][main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+2020-04-07 13:24:56.618[main][main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@749c877b, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@efde75f, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@16ecee1, org.springframework.test.context.support.DirtiesContextTestExecutionListener@3b220bcb, org.springframework.test.context.transaction.TransactionalTestExecutionListener@2b95e48b, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@4a3329b9, org.springframework.test.context.event.EventPublishingTestExecutionListener@3dddefd8, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@160ac7fb, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@12bfd80d, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@41925502, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@13e3c1c7, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@5316e95f]
+2020-04-07 13:24:56.874[main][main] INFO  c.n.m.mybatisxml.mapper.mapperTest - Starting mapperTest on LAPTOP-HIOADFTN with PID 3832 (started by 谢磊 in E:\study\spring-data\mybatis-xml)
+2020-04-07 13:24:56.874[main][main] DEBUG c.n.m.mybatisxml.mapper.mapperTest - Running with Spring Boot v2.2.6.RELEASE, Spring v5.2.5.RELEASE
+2020-04-07 13:24:56.874[main][main] INFO  c.n.m.mybatisxml.mapper.mapperTest - No active profile set, falling back to default profiles: default
+2020-04-07 13:24:57.160[main][main] DEBUG org.apache.ibatis.logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2020-04-07 13:24:57.646[main][main] INFO  c.n.m.mybatisxml.mapper.mapperTest - Started mapperTest in 0.984 seconds (JVM running for 2.096)
+2020-04-07 13:24:57.944[main][main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2020-04-07 13:24:58.608[main][main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2020-04-07 13:24:58.617[main][main] DEBUG c.n.m.m.m.MessageMapper.batchInsert - ==>  Preparing: INSERT INTO message(msg_text,msg_summary) VALUES (?,?) , (?,?) 
+2020-04-07 13:24:58.643[main][main] DEBUG c.n.m.m.m.MessageMapper.batchInsert - ==> Parameters: apple(String), 水果(String), orange(String), 水果(String)
+2020-04-07 13:24:58.733[main][main] DEBUG c.n.m.m.m.MessageMapper.batchInsert - <==    Updates: 2
+2020-04-07 13:24:58.735[main][main] INFO  c.n.m.mybatisxml.mapper.mapperTest - 插入数据条数: 2
+2020-04-07 13:24:58.746[main][main] DEBUG c.n.m.m.m.MessageMapper.updateText - ==>  Preparing: UPDATE message SET msg_text=? WHERE msg_id = ? 
+2020-04-07 13:24:58.746[main][main] DEBUG c.n.m.m.m.MessageMapper.updateText - ==> Parameters: computer(String), 2(Integer)
+2020-04-07 13:24:58.748[main][main] DEBUG c.n.m.m.m.MessageMapper.updateText - <==    Updates: 1
+2020-04-07 13:24:58.748[main][main] INFO  c.n.m.mybatisxml.mapper.mapperTest - 更新Text的数据条数: 1
+2020-04-07 13:24:58.753[main][main] DEBUG c.n.m.m.m.MessageMapper.selectAll - ==>  Preparing: select * from message 
+2020-04-07 13:24:58.753[main][main] DEBUG c.n.m.m.m.MessageMapper.selectAll - ==> Parameters: 
+2020-04-07 13:24:58.777[main][main] DEBUG c.n.m.m.m.MessageMapper.selectAll - <==      Total: 10
+2020-04-07 13:24:58.781[main][main] INFO  c.n.m.mybatisxml.mapper.mapperTest - 查询到的记录： [Message(msgId=2, msgText=computer, msgSummary=学校), Message(msgId=3, msgText=niit, msgSummary=学校), Message(msgId=4, msgText=niit, msgSummary=学校), Message(msgId=5, msgText=niit, msgSummary=学校), Message(msgId=6, msgText=HUAWEI, msgSummary=华为), Message(msgId=11, msgText=apple, msgSummary=水果), Message(msgId=12, msgText=orange, msgSummary=水果), Message(msgId=13, msgText=HUAWEI, msgSummary=华为), Message(msgId=14, msgText=apple, msgSummary=水果), Message(msgId=15, msgText=orange, msgSummary=水果)]
+2020-04-07 13:24:58.782[main][main] INFO  c.n.m.mybatisxml.mapper.mapperTest - 查询到的记录： [Message(msgId=2, msgText=computer, msgSummary=学校), Message(msgId=3, msgText=niit, msgSummary=学校), Message(msgId=4, msgText=niit, msgSummary=学校), Message(msgId=5, msgText=niit, msgSummary=学校), Message(msgId=6, msgText=HUAWEI, msgSummary=华为), Message(msgId=11, msgText=apple, msgSummary=水果), Message(msgId=12, msgText=orange, msgSummary=水果), Message(msgId=13, msgText=HUAWEI, msgSummary=华为), Message(msgId=14, msgText=apple, msgSummary=水果), Message(msgId=15, msgText=orange, msgSummary=水果)]
+2020-04-07 13:24:58.782[main][main] INFO  c.n.m.mybatisxml.mapper.mapperTest - 查询到的记录： [Message(msgId=2, msgText=computer, msgSummary=学校), Message(msgId=3, msgText=niit, msgSummary=学校), Message(msgId=4, msgText=niit, msgSummary=学校), Message(msgId=5, msgText=niit, msgSummary=学校), Message(msgId=6, msgText=HUAWEI, msgSummary=华为), Message(msgId=11, msgText=apple, msgSummary=水果), Message(msgId=12, msgText=orange, msgSummary=水果), Message(msgId=13, msgText=HUAWEI, msgSummary=华为), Message(msgId=14, msgText=apple, msgSummary=水果), Message(msgId=15, msgText=orange, msgSummary=水果)]
+2020-04-07 13:24:58.782[main][main] INFO  c.n.m.mybatisxml.mapper.mapperTest - 查询到的记录： [Message(msgId=2, msgText=computer, msgSummary=学校), Message(msgId=3, msgText=niit, msgSummary=学校), Message(msgId=4, msgText=niit, msgSummary=学校), Message(msgId=5, msgText=niit, msgSummary=学校), Message(msgId=6, msgText=HUAWEI, msgSummary=华为), Message(msgId=11, msgText=apple, msgSummary=水果), Message(msgId=12, msgText=orange, msgSummary=水果), Message(msgId=13, msgText=HUAWEI, msgSummary=华为), Message(msgId=14, msgText=apple, msgSummary=水果), Message(msgId=15, msgText=orange, msgSummary=水果)]
+2020-04-07 13:24:58.782[main][main] INFO  c.n.m.mybatisxml.mapper.mapperTest - 查询到的记录： [Message(msgId=2, msgText=computer, msgSummary=学校), Message(msgId=3, msgText=niit, msgSummary=学校), Message(msgId=4, msgText=niit, msgSummary=学校), Message(msgId=5, msgText=niit, msgSummary=学校), Message(msgId=6, msgText=HUAWEI, msgSummary=华为), Message(msgId=11, msgText=apple, msgSummary=水果), Message(msgId=12, msgText=orange, msgSummary=水果), Message(msgId=13, msgText=HUAWEI, msgSummary=华为), Message(msgId=14, msgText=apple, msgSummary=水果), Message(msgId=15, msgText=orange, msgSummary=水果)]
+2020-04-07 13:24:58.782[main][main] INFO  c.n.m.mybatisxml.mapper.mapperTest - 查询到的记录： [Message(msgId=2, msgText=computer, msgSummary=学校), Message(msgId=3, msgText=niit, msgSummary=学校), Message(msgId=4, msgText=niit, msgSummary=学校), Message(msgId=5, msgText=niit, msgSummary=学校), Message(msgId=6, msgText=HUAWEI, msgSummary=华为), Message(msgId=11, msgText=apple, msgSummary=水果), Message(msgId=12, msgText=orange, msgSummary=水果), Message(msgId=13, msgText=HUAWEI, msgSummary=华为), Message(msgId=14, msgText=apple, msgSummary=水果), Message(msgId=15, msgText=orange, msgSummary=水果)]
+2020-04-07 13:24:58.782[main][main] INFO  c.n.m.mybatisxml.mapper.mapperTest - 查询到的记录： [Message(msgId=2, msgText=computer, msgSummary=学校), Message(msgId=3, msgText=niit, msgSummary=学校), Message(msgId=4, msgText=niit, msgSummary=学校), Message(msgId=5, msgText=niit, msgSummary=学校), Message(msgId=6, msgText=HUAWEI, msgSummary=华为), Message(msgId=11, msgText=apple, msgSummary=水果), Message(msgId=12, msgText=orange, msgSummary=水果), Message(msgId=13, msgText=HUAWEI, msgSummary=华为), Message(msgId=14, msgText=apple, msgSummary=水果), Message(msgId=15, msgText=orange, msgSummary=水果)]
+2020-04-07 13:24:58.783[main][main] INFO  c.n.m.mybatisxml.mapper.mapperTest - 查询到的记录： [Message(msgId=2, msgText=computer, msgSummary=学校), Message(msgId=3, msgText=niit, msgSummary=学校), Message(msgId=4, msgText=niit, msgSummary=学校), Message(msgId=5, msgText=niit, msgSummary=学校), Message(msgId=6, msgText=HUAWEI, msgSummary=华为), Message(msgId=11, msgText=apple, msgSummary=水果), Message(msgId=12, msgText=orange, msgSummary=水果), Message(msgId=13, msgText=HUAWEI, msgSummary=华为), Message(msgId=14, msgText=apple, msgSummary=水果), Message(msgId=15, msgText=orange, msgSummary=水果)]
+2020-04-07 13:24:58.783[main][main] INFO  c.n.m.mybatisxml.mapper.mapperTest - 查询到的记录： [Message(msgId=2, msgText=computer, msgSummary=学校), Message(msgId=3, msgText=niit, msgSummary=学校), Message(msgId=4, msgText=niit, msgSummary=学校), Message(msgId=5, msgText=niit, msgSummary=学校), Message(msgId=6, msgText=HUAWEI, msgSummary=华为), Message(msgId=11, msgText=apple, msgSummary=水果), Message(msgId=12, msgText=orange, msgSummary=水果), Message(msgId=13, msgText=HUAWEI, msgSummary=华为), Message(msgId=14, msgText=apple, msgSummary=水果), Message(msgId=15, msgText=orange, msgSummary=水果)]
+2020-04-07 13:24:58.783[main][main] INFO  c.n.m.mybatisxml.mapper.mapperTest - 查询到的记录： [Message(msgId=2, msgText=computer, msgSummary=学校), Message(msgId=3, msgText=niit, msgSummary=学校), Message(msgId=4, msgText=niit, msgSummary=学校), Message(msgId=5, msgText=niit, msgSummary=学校), Message(msgId=6, msgText=HUAWEI, msgSummary=华为), Message(msgId=11, msgText=apple, msgSummary=水果), Message(msgId=12, msgText=orange, msgSummary=水果), Message(msgId=13, msgText=HUAWEI, msgSummary=华为), Message(msgId=14, msgText=apple, msgSummary=水果), Message(msgId=15, msgText=orange, msgSummary=水果)]
+2020-04-07 13:24:58.786[main][main] DEBUG c.n.m.m.mapper.MessageMapper.delete - ==>  Preparing: delete from message where msg_id=? 
+2020-04-07 13:24:58.787[main][main] DEBUG c.n.m.m.mapper.MessageMapper.delete - ==> Parameters: 1(Integer)
+2020-04-07 13:24:58.788[main][main] DEBUG c.n.m.m.mapper.MessageMapper.delete - <==    Updates: 0
+2020-04-07 13:24:58.788[main][main] INFO  c.n.m.mybatisxml.mapper.mapperTest - 删除的数据条数: 0
+2020-04-07 13:24:58.796[main][main] DEBUG c.n.m.m.mapper.MessageMapper.insert - ==>  Preparing: insert into message(msg_text,msg_summary) value (?,?) 
+2020-04-07 13:24:58.797[main][main] DEBUG c.n.m.m.mapper.MessageMapper.insert - ==> Parameters: HUAWEI(String), 华为(String)
+2020-04-07 13:24:58.805[main][main] DEBUG c.n.m.m.mapper.MessageMapper.insert - <==    Updates: 1
+2020-04-07 13:24:58.806[main][main] INFO  c.n.m.mybatisxml.mapper.mapperTest - 插入的数据： 1
+2020-04-07 13:24:58.810[main][main] DEBUG c.n.m.m.mapper.MessageMapper.update - ==>  Preparing: UPDATE message SET msg_text=?, msg_summary=? WHERE msg_id = ? 
+2020-04-07 13:24:58.810[main][main] DEBUG c.n.m.m.mapper.MessageMapper.update - ==> Parameters: computer(String), 学校(String), 1(Integer)
+2020-04-07 13:24:58.812[main][main] DEBUG c.n.m.m.mapper.MessageMapper.update - <==    Updates: 0
+2020-04-07 13:24:58.812[main][main] INFO  c.n.m.mybatisxml.mapper.mapperTest - 更新数据条数:0
+2020-04-07 13:24:58.816[main][main] DEBUG c.n.m.m.m.MessageMapper.selectById - ==>  Preparing: SELECT msg_id,msg_text,msg_summary FROM message where msg_id=? 
+2020-04-07 13:24:58.816[main][main] DEBUG c.n.m.m.m.MessageMapper.selectById - ==> Parameters: 1(Integer)
+2020-04-07 13:24:58.817[main][main] DEBUG c.n.m.m.m.MessageMapper.selectById - <==      Total: 0
+2020-04-07 13:24:58.818[main][main] INFO  c.n.m.mybatisxml.mapper.mapperTest - id为1的数据:  null
+2020-04-07 13:24:58.826[SpringContextShutdownHook][SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2020-04-07 13:24:58.834[SpringContextShutdownHook][SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.niit.mybatis.mybatisxml.mapper.MessageMapper">
+    <resultMap id="BaseResultMap" type="com.niit.mybatis.mybatisxml.model.Message">
+        <id column="msg_id" property="msgId" jdbcType="BIGINT"/>
+        <result column="msg_text" property="msgText" jdbcType="VARCHAR"/>
+        <result column="msg_summary" property="msgSummary" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <insert id="insert" parameterType="com.niit.mybatis.mybatisxml.model.Message">
+        insert into message(msg_text,msg_summary) value (#{msgText},#{msgSummary})
+    </insert>
+
+    <select id="selectAll" resultMap="BaseResultMap">
+        select * from message
+    </select>
+    <sql id="Base_Column_List">
+        msg_id,msg_text,msg_summary
+    </sql>
+
+    <select id="selectById" parameterType="Integer" resultMap="BaseResultMap">
+        SELECT
+        <include refid="Base_Column_List"/>
+        FROM message
+        where msg_id=#{msgId}
+    </select>
+
+    <delete id="delete" parameterType="Integer">
+        delete from message where msg_id=#{msgId}
+    </delete>
+
+    <update id="updateText" parameterType="com.niit.mybatis.mybatisxml.model.Message">
+        UPDATE message
+        <set>
+        <if test="msgText !=null and msgText != ''">msg_text=#{msgText}</if>
+        <if test="msgSummary !=null and msgSummary !=''">msg_Summary=#{msgSummary}</if>
+        </set>
+        WHERE msg_id = #{msgId}
+    </update>
+    <update id="update" parameterType="com.niit.mybatis.mybatisxml.model.Message">
+    UPDATE message SET
+    <if test="msgText !=null">msg_text=#{msgText},</if>
+    <if test="msgSummary !=null">msg_summary=#{msgSummary}</if>
+    WHERE msg_id = #{msgId}
+</update>
+
+    <insert id="batchInsert" parameterType="com.niit.mybatis.mybatisxml.model.Message">
+        INSERT INTO message(msg_text,msg_summary) VALUES
+        <foreach collection="list" item="msg" index="index" separator=",">
+            (#{msg.msgText},#{msg.msgSummary})
+        </foreach>
+    </insert>
+</mapper>
